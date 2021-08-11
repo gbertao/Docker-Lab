@@ -29,3 +29,5 @@
 `docker run -v <hp>:<cp> <image>` : maps the host file directory <hf> to the container's file directory <cf>. The data is persist even when the container is down.
 
 `docker logs <container>` : prints the stdout of the container.
+
+`docker inspect <container> --format "{{ .Config.Env }}"`: checks for any environment variable defined on the container.

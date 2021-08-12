@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+  recv:
+    container_name: recv
+    build:
+      context: ./
+      dockerfile: Dockerfile-recv
+    expose:
+      - 38080
+
+  send:
+    container_name: send
+    build:
+      context: ./
+      dockerfile: Dockerfile-send
+    depends_on:
+      - recv

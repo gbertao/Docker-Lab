@@ -1,0 +1,5 @@
+FROM busybox
+
+EXPOSE 38080
+
+ENTRYPOINT nc -l -p 38080

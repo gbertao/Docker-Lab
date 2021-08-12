@@ -1,0 +1,7 @@
+FROM busybox
+
+COPY send.sh /bin
+
+RUN chmod +x /bin/send.sh
+
+CMD ["sh", "/bin/send.sh"] 
